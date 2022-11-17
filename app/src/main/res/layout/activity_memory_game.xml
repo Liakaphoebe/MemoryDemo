@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/memory_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/memory_games"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="#CB8F0B2A"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Level: 1"
+                android:textAlignment="center"
+                android:textColor="#CB8F0B2A"
+                android:textSize="18sp" />
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:text="00 min : 00 sec"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="#CB8F0B2A"-->
+<!--                android:textSize="18sp" />-->
+
+            <Chronometer
+                android:id="@+id/tv_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="center"
+                android:textColor="#CB8F0B2A"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/tv_attempts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Attempts: 1"
+                android:textAlignment="center"
+                android:textColor="#CB8F0B2A"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_bestTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Best: 00.00"
+                android:textAlignment="center"
+                android:textColor="#CB8F0B2A"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+<!--    <GridView-->
+<!--        android:id="@+id/memory_grid"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:numColumns="3"-->
+<!--        android:verticalSpacing="10dp"-->
+<!--        android:horizontalSpacing="10dp"-->
+<!--        tools:listitem="@layout/memory_card"-->
+<!--        android:layout_margin="20dp" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/memory_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/memory_card" />
+
+</LinearLayout>
